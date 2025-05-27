@@ -480,6 +480,11 @@ a {
         font-size: 30px;
     }
 
+    iframe {
+        width: 660px;
+        height: 365px;
+    }
+
     .thankYou h3 {
         font-size: 75px;
     }
