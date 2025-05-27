@@ -1,0 +1,443 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+h4 {
+    font-size: 40px;
+}
+
+h5 {
+    font-size: 20px;
+    font-style: italic;
+    font-weight: regular;
+    margin-top: 15px;
+}
+
+/* HEADER*/
+#header {
+    position: relative; /* Make sure pseudo-elements are positioned correctly */
+    height: 750px;
+    background-color: #00712d;
+    color: white;
+    text-align: center;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    padding: 0px 150px 0px 150px;
+    overflow: hidden; /* Prevent pseudo-elements from spilling out */
+}
+
+#header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('src/1.png') no-repeat 40% / cover;
+  background-attachment: fixed;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 1;
+}
+
+#header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.20); /* <-- Changed to solid dark overlay */
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Ensure content is above the overlays */
+#header > * {
+  position: relative;
+  z-index: 3;
+}
+
+#header h1 {
+    font-size: 75px;
+}
+
+
+/* talkboardContents */
+.talkboardContents {
+    height: 80vh;
+    display: flex; 
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+    padding: 0px 150px 0px 150px;
+}
+
+.talkboardContents .contents {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    padding: 0px 40px 0px 0px;
+}
+
+.talkboardContents img {
+    height: 75px;
+    margin-bottom: 20px;
+}
+
+.talkboardContents p {
+    text-align: justify;
+}
+
+.carousel img {
+    height: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px; /* optional for rounded corners */
+}
+
+.carousel {
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  padding: 50px;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  width: 700%; /* 7 slides × 100% */
+  animation: smoothSlide 35s ease-in-out infinite;
+}
+
+.slide {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.slide img {
+  height: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px; /* optional for rounded corners */
+  display: block;
+  object-fit: cover;
+}
+
+/* Smooth auto slide animation */
+@keyframes smoothSlide {
+  0%     { transform: translateX(0%); }
+  14.285%  { transform: translateX(0%); }
+
+  16%   { transform: translateX(-100%); }
+  28.57% { transform: translateX(-100%); }
+
+  30.5%  { transform: translateX(-200%); }
+  42.85% { transform: translateX(-200%); }
+
+  44.5%  { transform: translateX(-300%); }
+  57.14% { transform: translateX(-300%); }
+
+  59%   { transform: translateX(-400%); }
+  71.42% { transform: translateX(-400%); }
+
+  73.5%  { transform: translateX(-500%); }
+  85.71% { transform: translateX(-500%); }
+
+  87.5%  { transform: translateX(-600%); }
+  99.99% { transform: translateX(-600%); }
+
+  100%   { transform: translateX(0%); }
+}
+
+
+/* features */
+.features {
+    position: relative;
+    height: 30vh;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    padding: 0px 150px 0 150px;
+    overflow: hidden; /* ensures overlays don’t spill out */
+}
+
+/* Background image layer */
+.features::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('src/3.png') no-repeat center center / cover;
+    opacity: 1;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Bottom fade overlay */
+.features::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.20); /* <-- Changed to solid dark overlay */
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Make sure inner content stays above */
+.features > * {
+    position: relative;
+    z-index: 3;
+}
+
+
+.features h4 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.features .listFeatures {
+    display: flex; 
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+}
+
+.features .listFeatures .eachFeature {
+    width: 250px;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    padding: 0 50px 0 50px;
+}
+
+.eachFeature {
+    color: white;
+}
+
+.eachFeature i {
+    font-size: 75px;
+    margin-bottom: 10px;
+}
+
+
+
+/* demonstration */
+.demonstration {
+    position: relative;
+    height: 750px;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    padding: 0px 150px 0 150px;
+    background-color: #00712d;
+    color: white;
+    overflow: hidden; /* ensures overlays don’t spill out */
+}
+
+/* Background image layer */
+.demonstration::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('src/2.png') no-repeat center center / cover;
+    opacity: 0.1;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Bottom fade overlay */
+.demonstration::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.20); /* <-- Changed to solid dark overlay */
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Make sure inner content stays above */
+.demonstration > * {
+    position: relative;
+    z-index: 3;
+}
+
+.demonstration .videoContainer {
+    display: flex; 
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+}
+
+.demonstration .videoContainer .video {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    padding: 25px 50px 0px 50px;
+}
+
+video {
+    height: 400px;
+}
+
+/* evalThank */
+.evalThank {
+    position: relative; /* Make sure pseudo-elements are positioned correctly */
+    height: 100vh;
+    background-color: #00712d;
+    color: white;
+
+    display: flex; 
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+    overflow: hidden; /* Prevent pseudo-elements from spilling out */
+}
+
+.evalThank::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('src/4.png') no-repeat 40% / cover;
+  background-attachment: fixed;
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Ensure content is above the overlays */
+.evalThank > * {
+  position: relative;
+  z-index: 3;
+}
+
+.evalThank {
+    height: 100vh;
+    display: flex; 
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+
+    background-color: white;
+    color: #00712d;
+}
+
+.evalForm, .thankYou {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    padding: 0px 50px 0px 50px;
+}
+
+.evalForm img {
+    height: 400px;
+}
+
+.evalForm h5 {
+    font-size: 30px;
+}
+
+.thankYou h3 {
+    font-size: 75px;
+}
+
+.thankYou span {
+    font-size: 25px;
+}
+
+.thankYou span a {
+    font-size: 25px;
+}
+
+
+
+/* teamMembers */
+.teamMembers {
+    position: relative;
+    height: 900px;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    background-color: #00712d;
+    color: white;
+    overflow: hidden; /* ensures overlays don’t spill out */
+}
+
+/* Background image layer */
+.teamMembers::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('src/6.png') no-repeat center center / cover;
+    background-attachment: fixed;
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Make sure inner content stays above */
+.teamMembers > * {
+    position: relative;
+    z-index: 3;
+}
+
+.teamMembers h4 {
+    margin-bottom: 40px;
+}
+
+.teamMembers .members {
+    display: flex; 
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+}
+
+.teamMembers .members .eachMember {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    padding: 0px 50px 0px 50px;
+}
+
+.teamMembers .members .eachMember img {
+    height: 350px;
+    border-radius: 250px;
+}
+
+.teamMembers .members .eachMember .nameMember {
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.teamMembers .members .eachMember .memberEmail {
+    font-style: italic;
+    font-size: 13px;
+}
+
+/* footer */
+footer {
+    height: 75px;
+    background-color: #b2b8b8;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 0 20px;
+}
+
+footer img {
+    height: 50px;
+}
+
+a {
+    font-weight: bold;  
+    font-style: italic;
+    color: #00712d;
+}
