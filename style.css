@@ -20,7 +20,7 @@ h5 {
 
 /* HEADER*/
 #header {
-    position: relative; /* Make sure pseudo-elements are positioned correctly */
+    position: relative; 
     height: 80vh;
     background-color: #00712d;
     color: white;
@@ -30,7 +30,7 @@ h5 {
     justify-content: center; 
     align-items: center;
     padding: 0px 150px 0px 150px;
-    overflow: hidden; /* Prevent pseudo-elements from spilling out */
+    overflow: hidden; 
 }
 
 #header::before {
@@ -48,12 +48,11 @@ h5 {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.20); /* <-- Changed to solid dark overlay */
+  background-color: rgba(0, 0, 0, 0.20); 
   pointer-events: none;
   z-index: 2;
 }
 
-/* Ensure content is above the overlays */
 #header > * {
   position: relative;
   z-index: 3;
@@ -101,7 +100,7 @@ h5 {
 
 .slides {
   display: flex;
-  width: 700%; /* 7 slides × 100% */
+  width: 700%; 
   animation: smoothSlide 35s ease-in-out infinite;
 }
 
@@ -113,7 +112,7 @@ h5 {
 .slide img {
   height: 300px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 8px; /* optional for rounded corners */
+    border-radius: 8px; 
   display: block;
   object-fit: cover;
 }
@@ -154,7 +153,7 @@ h5 {
     justify-content: center; 
     align-items: center;
     padding: 0px 100px 0 100px;
-    overflow: hidden; /* ensures overlays don’t spill out */
+    overflow: hidden; 
 }
 
 /* Background image layer */
@@ -173,12 +172,11 @@ h5 {
     content: "";
     position: absolute;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.50); /* <-- Changed to solid dark overlay */
+    background-color: rgba(0, 0, 0, 0.50); 
     pointer-events: none;
     z-index: 2;
 }
 
-/* Make sure inner content stays above */
 .features > * {
     position: relative;
     z-index: 3;
@@ -229,7 +227,7 @@ h5 {
     padding: 0px 150px 0 150px;
     background-color: #00712d;
     color: white;
-    overflow: hidden; /* ensures overlays don’t spill out */
+    overflow: hidden; 
 }
 
 /* Background image layer */
@@ -248,12 +246,11 @@ h5 {
     content: "";
     position: absolute;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.20); /* <-- Changed to solid dark overlay */
+    background-color: rgba(0, 0, 0, 0.20); 
     pointer-events: none;
     z-index: 2;
 }
 
-/* Make sure inner content stays above */
 .demonstration > * {
     position: relative;
     z-index: 3;
@@ -277,7 +274,7 @@ h5 {
 
 /* evalThank */
 .evalThank {
-    position: relative; /* Make sure pseudo-elements are positioned correctly */
+    position: relative; 
     height: 100vh;
     background-color: white;
     color: #00712d;
@@ -286,7 +283,7 @@ h5 {
     flex-direction: row;
     justify-content: center; 
     align-items: center;
-    overflow: hidden; /* Prevent pseudo-elements from spilling out */
+    overflow: hidden; 
 }
 
 .evalThank::before {
@@ -300,7 +297,6 @@ h5 {
   z-index: 1;
 }
 
-/* Ensure content is above the overlays */
 .evalThank > * {
   position: relative;
   z-index: 3;
@@ -342,10 +338,9 @@ h5 {
     align-items: center;
     background-color: #00712d;
     color: white;
-    overflow: hidden; /* ensures overlays don’t spill out */
+    overflow: hidden; 
 }
 
-/* Background image layer */
 .teamMembers::before {
     content: "";
     position: absolute;
@@ -357,7 +352,6 @@ h5 {
     z-index: 1;
 }
 
-/* Make sure inner content stays above */
 .teamMembers > * {
     position: relative;
     z-index: 3;
@@ -451,7 +445,7 @@ a {
         .slide img {
     height: 400px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-        border-radius: 8px; /* optional for rounded corners */
+        border-radius: 8px; 
     display: block;
     object-fit: cover;
     }
