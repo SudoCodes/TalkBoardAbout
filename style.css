@@ -7,6 +7,10 @@
     font-size: 14px;
 }
 
+h1, h2, h3, h4, h5 {
+    text-align: center;
+}
+
 h4 {
     font-size: 30px;
 }
@@ -562,10 +566,9 @@ a {
     height: fit-content;
     display: flex; 
     flex-direction: column;
-    justify-content: center; 
+    justify-content: start; 
     align-items: center;
     padding: 30px 100px 30px 100px;
-    overflow: hidden; 
 }
 
 .features .listFeatures .eachFeature {
@@ -595,6 +598,137 @@ a {
     padding: 50px 150px 50px 150px;
     text-align: center;
 }
+
+.teamMembers {
+    height: fit-content;
+    padding: 50px 150px 50px 150px;
+}
+
+.teamMembers .members {
+    flex-direction: column;
+}
+
+.teamMembers .members .eachMember {
+    padding: 25px 0px 20px 0px;
+}
+
+footer img {
+    height: 25px;
+}
+
+}
+
+
+@media (max-width: 640px) {
+    * {
+        font-size: 13px;
+    }
+
+    h4 {
+        font-size: 25px;
+    }
+
+    h5 {
+        font-size: 15px;}
+
+    #header {
+        height: 100vh;
+        padding: 0px 50px 0px 50px;
+    }
+
+#header h1 {
+    font-size: 45px;
+}
+
+.talkboardContents {
+    height: fit-content;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    padding: 50px 100px 50px 100px;
+}
+
+.talkboardContents .contents {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    padding: 0px 0px 50px 0px;
+}
+
+.carousel {
+  padding: 0;
+}
+
+.slide img {
+  height: 125px;
+}
+
+.features {
+    height: fit-content;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    padding: 30px 0 30px 0;
+}
+
+.features .listFeatures {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.features .listFeatures .eachFeature {
+    padding: 15px 0;
+}
+
+.eachFeature i {
+    font-size: 40px;
+}
+
+.demonstration {
+    height: fit-content;
+    flex-direction: column;
+    padding: 50px 150px 50px 150px;
+}
+
+.demonstration .videoContainer {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+}
+
+iframe {
+    width: fit-content;
+    height: max-content;
+}
+
+.evalThank {
+    height: max-content;
+    flex-direction: column;
+    padding: 50px 50px 50px 50px;
+    text-align: center;
+}
+
+.thankYou {
+    margin-top: 10px;
+}
+
+.evalForm img {
+    height: 200px;
+}
+
+.evalForm h5 {
+    font-size: 20px;
+}
+
+.thankYou h3 {
+    font-size: 35px;
+}
+
 
 .teamMembers {
     height: fit-content;
