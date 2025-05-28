@@ -22,7 +22,7 @@ h5 {
 #header {
     position: relative; 
     height: 80vh;
-    background-color: #00712d;
+    background-color: #13714c;
     color: white;
     text-align: center;
     display: flex; 
@@ -225,7 +225,7 @@ h5 {
     justify-content: center; 
     align-items: center;
     padding: 0px 150px 0 150px;
-    background-color: #00712d;
+    background-color: #13714c;
     color: white;
     overflow: hidden; 
 }
@@ -277,7 +277,7 @@ h5 {
     position: relative; 
     height: 100vh;
     background-color: white;
-    color: #00712d;
+    color: #13714c;
 
     display: flex; 
     flex-direction: row;
@@ -336,7 +336,7 @@ h5 {
     flex-direction: column;
     justify-content: center; 
     align-items: center;
-    background-color: #00712d;
+    background-color: #13714c;
     color: white;
     overflow: hidden; 
 }
@@ -410,7 +410,7 @@ footer img {
 a {
     font-weight: bold;  
     font-style: italic;
-    color: #00712d;
+    color: #13714c;
 }
 
 /* === RESPONSIVE DESIGN === */
@@ -509,10 +509,108 @@ a {
     footer img {
         height: 50px;
     }
+}
 
-    a {
-        font-weight: bold;  
-        font-style: italic;
-        color: #00712d;
+
+@media (max-width: 800px) {
+    * {
+        font-size: 13px;
     }
+
+    h4 {
+        font-size: 25px;
+        }
+
+    h5 {
+        font-size: 15px;}
+
+    #header {
+        height: 100vh;
+        padding: 0px 50px 0px 50px;
+    }
+
+#header h1 {
+    font-size: 55px;
+}
+
+.talkboardContents {
+    height: fit-content;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    padding: 50px 100px 50px 100px;
+}
+
+.talkboardContents .contents {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    padding: 0px 0px 50px 0px;
+}
+
+.carousel {
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  padding: 0 10px 0 30px;
+  position: relative;
+}
+
+.features {
+    height: fit-content;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    padding: 30px 100px 30px 100px;
+    overflow: hidden; 
+}
+
+.features .listFeatures .eachFeature {
+    padding: 0 30px 0 30px;
+}
+
+.eachFeature i {
+    font-size: 40px;
+}
+
+.demonstration {
+    height: fit-content;
+    flex-direction: column;
+    padding: 50px 150px 50px 150px;
+}
+
+.demonstration .videoContainer {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+}
+
+.evalThank {
+    height: fit-content;
+    flex-direction: column;
+    padding: 50px 150px 50px 150px;
+    text-align: center;
+}
+
+.teamMembers {
+    height: fit-content;
+    padding: 50px 150px 50px 150px;
+}
+
+.teamMembers .members {
+    flex-direction: column;
+}
+
+.teamMembers .members .eachMember {
+    padding: 25px 0px 20px 0px;
+}
+
+footer img {
+    height: 25px;
+}
+
 }
